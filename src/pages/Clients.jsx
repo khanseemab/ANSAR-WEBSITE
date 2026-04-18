@@ -1,26 +1,28 @@
 import './Clients.css'
 
+const base = import.meta.env.BASE_URL
+
 const clients = [
-  { name: 'SABIC',                          sector: 'Petrochemical',  tier: 1, img: '/images/sabic.jpeg' },
-  { name: 'Saudi Aramco',                   sector: 'Oil & Gas',      tier: 1, img: '/images/aramco.png' },
-  { name: 'SATORP',                         sector: 'Refinery',       tier: 1, img: '/images/satorp.jpeg' },
-  { name: 'Saudi Electricity Company',      sector: 'Power',          tier: 1, img: '/images/electricity company.jpeg' },
-  { name: 'MARAFIQ',                        sector: 'Utilities',      tier: 1, img: '/images/Marafiq.jpeg' },
-  { name: 'Hyundai E&C',                    sector: 'EPC Contractor', tier: 2, img: '/images/Hyundai.png' },
-  { name: 'TASNEE',                         sector: 'Petrochemical',  tier: 2, img: '/images/tasnee.png' },
-  { name: 'Royal Commission Jubail & Yanbu',sector: 'Government',     tier: 2, img: '/images/Royal comission.png' },
-  { name: 'Sadara',                         sector: 'Petrochemical',  tier: 2, img: '/images/sadara.jpeg' },
-  { name: 'Al-Tamimi Industrial',           sector: 'Industrial',     tier: 2, img: '/images/tamimi.jpeg' },
-  { name: 'Advanced',                       sector: 'Industrial',     tier: 2, img: '/images/advanced.png' },
-  { name: 'Siemens',                        sector: 'Technology',     tier: 2, img: '/images/Siemens.png' },
-  { name: 'KENTZ',                          sector: 'EPC Contractor', tier: 3, img: '/images/kentz.jpeg' },
-  { name: 'JESCO',                          sector: 'Construction',   tier: 3, img: '/images/jesco.png' },
-  { name: 'Chemanol',                       sector: 'Petrochemical',  tier: 3, img: '/images/chemanol.png' },
-  { name: 'Sahara Petrochemicals',          sector: 'Petrochemical',  tier: 3, img: '/images/sahara.png' },
-  { name: 'SAFCO',                          sector: 'Petrochemical',  tier: 3, img: '/images/safco.jpeg' },
-  { name: 'SASREF',                         sector: 'Refinery',       tier: 3, img: '/images/sasref.png' },
-  { name: 'WISON',                          sector: 'EPC Contractor', tier: 3, img: '/images/wison.png' },
-  { name: 'KBR',                            sector: 'EPC Contractor', tier: 3, img: '/images/kbr.png' },
+  { name: 'SABIC',                          sector: 'Petrochemical',  tier: 1, img: `${base}images/sabic.jpeg` },
+  { name: 'Saudi Aramco',                   sector: 'Oil & Gas',      tier: 1, img: `${base}images/aramco.png` },
+  { name: 'SATORP',                         sector: 'Refinery',       tier: 1, img: `${base}images/satorp.jpeg` },
+  { name: 'Saudi Electricity Company',      sector: 'Power',          tier: 1, img: `${base}images/electricity company.jpeg` },
+  { name: 'MARAFIQ',                        sector: 'Utilities',      tier: 1, img: `${base}images/Marafiq.jpeg` },
+  { name: 'Hyundai E&C',                    sector: 'EPC Contractor', tier: 2, img: `${base}images/Hyundai.png` },
+  { name: 'TASNEE',                         sector: 'Petrochemical',  tier: 2, img: `${base}images/tasnee.png` },
+  { name: 'Royal Commission Jubail & Yanbu',sector: 'Government',     tier: 2, img: `${base}images/Royal comission.png` },
+  { name: 'Sadara',                         sector: 'Petrochemical',  tier: 2, img: `${base}images/sadara.jpeg` },
+  { name: 'Al-Tamimi Industrial',           sector: 'Industrial',     tier: 2, img: `${base}images/tamimi.jpeg` },
+  { name: 'Advanced',                       sector: 'Industrial',     tier: 2, img: `${base}images/advanced.png` },
+  { name: 'Siemens',                        sector: 'Technology',     tier: 2, img: `${base}images/Siemens.png` },
+  { name: 'KENTZ',                          sector: 'EPC Contractor', tier: 3, img: `${base}images/kentz.jpeg` },
+  { name: 'JESCO',                          sector: 'Construction',   tier: 3, img: `${base}images/jesco.png` },
+  { name: 'Chemanol',                       sector: 'Petrochemical',  tier: 3, img: `${base}images/chemanol.png` },
+  { name: 'Sahara Petrochemicals',          sector: 'Petrochemical',  tier: 3, img: `${base}images/sahara.png` },
+  { name: 'SAFCO',                          sector: 'Petrochemical',  tier: 3, img: `${base}images/safco.jpeg` },
+  { name: 'SASREF',                         sector: 'Refinery',       tier: 3, img: `${base}images/sasref.png` },
+  { name: 'WISON',                          sector: 'EPC Contractor', tier: 3, img: `${base}images/wison.png` },
+  { name: 'KBR',                            sector: 'EPC Contractor', tier: 3, img: `${base}images/kbr.png` },
 ]
 
 const sectors = [...new Set(clients.map(c => c.sector))]

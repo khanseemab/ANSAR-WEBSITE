@@ -33,7 +33,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="nav-logo" onClick={() => setOpen(false)}>
             <div className="logo-ring">
-              <img src="/companyLogo.jpeg" alt="Ansar" className="logo-img" />
+              <img src={`${import.meta.env.BASE_URL}companyLogo.jpeg`} alt="Ansar" className="logo-img" />
               <div className="logo-pulse" />
             </div>
             <div className="logo-text">

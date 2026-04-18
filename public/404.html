@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      // Redirect all 404s back to index with the path encoded as a query param
+      var path = window.location.pathname.replace('/ANSAR-WEBSITE', '');
+      var search = window.location.search;
+      var hash = window.location.hash;
+      window.location.replace('/ANSAR-WEBSITE/?p=' + encodeURIComponent(path + search + hash));
+    </script>
+  </head>
+  <body></body>
+</html>

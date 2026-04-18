@@ -5,6 +5,13 @@
     <link rel="icon" type="image/jpeg" href="/companyLogo.jpeg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Ansar International Co. Ltd. — Reliability you can Lean on. Strength you can See." />
+    <script>
+      // Handle redirect from 404.html for React Router on GitHub Pages
+      (function() {
+        var p = new URLSearchParams(window.location.search).get('p');
+        if (p) window.history.replaceState(null, '', '/ANSAR-WEBSITE' + decodeURIComponent(p));
+      })();
+    </script>
     <title>Ansar International Co. Ltd. | Industrial Contracting — Jubail, KSA</title>
   </head>
   <body>

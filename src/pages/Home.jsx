@@ -99,7 +99,7 @@ export default function Home() {
               <div className="hv-ring hv-ring-2" />
               <div className="hv-ring hv-ring-3" />
               <div className="hv-card glass-strong">
-                <img src="/companyLogo.jpeg" alt="Ansar International" className="hv-logo" />
+                <img src={`${import.meta.env.BASE_URL}companyLogo.jpeg`} alt="Ansar International" className="hv-logo" />
                 <div className="hv-info">
                   <span className="hv-name">ANSAR INTERNATIONAL</span>
                   <span className="hv-sub">CO. LTD.</span>
