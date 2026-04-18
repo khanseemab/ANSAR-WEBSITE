@@ -5,7 +5,19 @@ export default function Contact() {
   const [form, setForm] = useState({ name:'', company:'', email:'', phone:'', subject:'', message:'' })
   const [sent, setSent] = useState(false)
   const change = e => setForm(f => ({ ...f, [e.target.name]: e.target.value }))
-  const submit = e => { e.preventDefault(); setSent(true) }
+  const submit = e => {
+    e.preventDefault()
+    const body = `Name: ${form.name}
+Company: ${form.company || 'N/A'}
+Phone: ${form.phone || 'N/A'}
+Email: ${form.email}
+Service Area: ${form.subject}
+
+Message:
+${form.message}`
+    window.location.href = `mailto:Info@ansararabia.com?subject=${encodeURIComponent(`[Website Enquiry] ${form.subject}`)}&body=${encodeURIComponent(body)}`
+    setSent(true)
+  }
 
   return (
     <div className="contact-page">
