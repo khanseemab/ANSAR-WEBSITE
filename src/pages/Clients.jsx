@@ -1,26 +1,26 @@
 import './Clients.css'
 
 const clients = [
-  { name: 'SABIC',                          sector: 'Petrochemical', tier: 1 },
-  { name: 'Saudi Aramco',                   sector: 'Oil & Gas',     tier: 1 },
-  { name: 'SATORP',                         sector: 'Refinery',      tier: 1 },
-  { name: 'Saudi Electricity Company',      sector: 'Power',         tier: 1 },
-  { name: 'MARAFIQ',                        sector: 'Utilities',     tier: 1 },
-  { name: 'Hyundai E&C',                   sector: 'EPC Contractor', tier: 2 },
-  { name: 'TASNEE',                         sector: 'Petrochemical', tier: 2 },
-  { name: 'Royal Commission Jubail & Yanbu',sector: 'Government',    tier: 2 },
-  { name: 'Sadara',                         sector: 'Petrochemical', tier: 2 },
-  { name: 'Al-Tamimi Industrial',           sector: 'Industrial',    tier: 2 },
-  { name: 'Advanced',                       sector: 'Industrial',    tier: 2 },
-  { name: 'Siemens',                        sector: 'Technology',    tier: 2 },
-  { name: 'KENTZ',                          sector: 'EPC Contractor', tier: 3 },
-  { name: 'JESCO',                          sector: 'Construction',  tier: 3 },
-  { name: 'Chemanol',                       sector: 'Petrochemical', tier: 3 },
-  { name: 'Sahara Petrochemicals',          sector: 'Petrochemical', tier: 3 },
-  { name: 'SAFCO',                          sector: 'Petrochemical', tier: 3 },
-  { name: 'SASREF',                         sector: 'Refinery',      tier: 3 },
-  { name: 'WISON',                          sector: 'EPC Contractor', tier: 3 },
-  { name: 'KBR',                            sector: 'EPC Contractor', tier: 3 },
+  { name: 'SABIC',                          sector: 'Petrochemical',  tier: 1, img: '/images/sabic.jpeg' },
+  { name: 'Saudi Aramco',                   sector: 'Oil & Gas',      tier: 1, img: '/images/aramco.png' },
+  { name: 'SATORP',                         sector: 'Refinery',       tier: 1, img: '/images/satorp.jpeg' },
+  { name: 'Saudi Electricity Company',      sector: 'Power',          tier: 1, img: '/images/electricity company.jpeg' },
+  { name: 'MARAFIQ',                        sector: 'Utilities',      tier: 1, img: '/images/Marafiq.jpeg' },
+  { name: 'Hyundai E&C',                    sector: 'EPC Contractor', tier: 2, img: '/images/Hyundai.png' },
+  { name: 'TASNEE',                         sector: 'Petrochemical',  tier: 2, img: '/images/tasnee.png' },
+  { name: 'Royal Commission Jubail & Yanbu',sector: 'Government',     tier: 2, img: '/images/Royal comission.png' },
+  { name: 'Sadara',                         sector: 'Petrochemical',  tier: 2, img: '/images/sadara.jpeg' },
+  { name: 'Al-Tamimi Industrial',           sector: 'Industrial',     tier: 2, img: '/images/tamimi.jpeg' },
+  { name: 'Advanced',                       sector: 'Industrial',     tier: 2, img: '/images/advanced.png' },
+  { name: 'Siemens',                        sector: 'Technology',     tier: 2, img: '/images/Siemens.png' },
+  { name: 'KENTZ',                          sector: 'EPC Contractor', tier: 3, img: '/images/kentz.jpeg' },
+  { name: 'JESCO',                          sector: 'Construction',   tier: 3, img: '/images/jesco.png' },
+  { name: 'Chemanol',                       sector: 'Petrochemical',  tier: 3, img: '/images/chemanol.png' },
+  { name: 'Sahara Petrochemicals',          sector: 'Petrochemical',  tier: 3, img: '/images/sahara.png' },
+  { name: 'SAFCO',                          sector: 'Petrochemical',  tier: 3, img: '/images/safco.jpeg' },
+  { name: 'SASREF',                         sector: 'Refinery',       tier: 3, img: '/images/sasref.png' },
+  { name: 'WISON',                          sector: 'EPC Contractor', tier: 3, img: '/images/wison.png' },
+  { name: 'KBR',                            sector: 'EPC Contractor', tier: 3, img: '/images/kbr.png' },
 ]
 
 const sectors = [...new Set(clients.map(c => c.sector))]
@@ -74,8 +74,8 @@ export default function Clients() {
           <div className="cl-grid">
             {clients.map((c, i) => (
               <div key={c.name} className={`cl-card glass au d${Math.min((i % 6) + 1, 6)}`}>
-                <div className="cl-avatar" style={{ '--cc': colorMap[c.sector] || 'var(--or)' }}>
-                  <span>{c.name.charAt(0)}</span>
+                <div className="cl-avatar cl-logo-wrap" style={{ '--cc': colorMap[c.sector] || 'var(--or)' }}>
+                  <img src={c.img} alt={c.name} className="cl-logo-img" />
                   <div className="cl-avatar-ring" />
                 </div>
                 <span className="cl-name">{c.name}</span>

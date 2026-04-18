@@ -73,9 +73,9 @@
 
 /* ── LOGO ──────────────────────────────────────────────────── */
 .nav-logo { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
-.logo-ring { position: relative; width: 105px; height: 45px; flex-shrink: 0; }
-.logo-img {
-  width: 105px; height: 45px; border-radius: 10px; object-fit: contain;
+.logo-ring {position: relative; width: 105px; height: 45px; flex-shrink: 0; }
+.logo-img { background-color: rgb(255, 255, 255);
+  width: 105px; height: 45px; border-radius: 5px; object-fit: contain;
   border: 1px solid var(--primary-border); position: relative; z-index: 1;
 }
 .logo-pulse {
