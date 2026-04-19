@@ -9,7 +9,7 @@
       // Handle redirect from 404.html for React Router on GitHub Pages
       (function() {
         var p = new URLSearchParams(window.location.search).get('p');
-        if (p) window.history.replaceState(null, '', '/ANSAR-WEBSITE' + decodeURIComponent(p));
+        if (p) window.history.replaceState(null, '', decodeURIComponent(p));
       })();
     </script>
     <title>Ansar International Co. Ltd. | Industrial Contracting — Jubail, KSA</title>
