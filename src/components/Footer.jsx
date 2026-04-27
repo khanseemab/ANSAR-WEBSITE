@@ -74,14 +74,14 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="glow-line" style={{ margin: '0 28px' }} />
+      <div className="glow-line" style={{ margin: '0 28px', display: 'flex', justifyContent: 'center' }} />
 
-      <div className="container footer-bottom">
-        <p>© {new Date().getFullYear()} Ansar International Co. Ltd. — All rights reserved.</p>
-        <a href="https://www.rawstitch.in" target="_blank" rel="noreferrer" className="powered-by">
+      <span className=" footer-bottom">
+        <p style={{display:"flex", justifyContent: "center", textAlign: "center", width: "100%"}}>© {new Date().getFullYear()} Ansar International Co. Ltd. — All rights reserved.</p>
+        {/* <a href="https://www.rawstitch.in" target="_blank" rel="noreferrer" className="powered-by">
           Crafted by <span>RAW STITCH</span>
-        </a>
-      </div>
+        </a> */}
+      </span>
     </footer>
   )
 }
